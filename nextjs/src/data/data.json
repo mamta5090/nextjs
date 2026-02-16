@@ -1,0 +1,58 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Full Stack Web Development",
+      "description": "Learn to build web applications using HTML, CSS, JavaScript, React, Node.js, and MongoDB.",
+      "price": "4999",
+      "instruction": "John Doe",
+      "isfeatured": "true",
+      "image": "https://example.com/images/fullstack.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Data Science with Python",
+      "description": "Master data analysis, visualization, and machine learning using Python libraries.",
+      "price": "5999",
+      "instruction": "Jane Smith",
+      "isfeatured": "false",
+      "image": "https://example.com/images/datascience.jpg"
+    },
+    {
+      "id": 3,
+      "title": "UI/UX Design Fundamentals",
+      "description": "Understand user experience principles and design beautiful interfaces using Figma.",
+      "price": "2999",
+      "instruction": "Emily Carter",
+      "isfeatured": "true",
+      "image": "https://example.com/images/uiux.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Machine Learning A-Z",
+      "description": "Explore supervised and unsupervised learning with hands-on Python projects.",
+      "price": "6999",
+      "instruction": "David Lee",
+      "isfeatured": "true",
+      "image": "https://example.com/images/ml.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Android App Development",
+      "description": "Develop modern Android applications using Java and Kotlin with Android Studio.",
+      "price": "3999",
+      "instruction": "Priya Kumar",
+      "isfeatured": "false",
+      "image": "https://example.com/images/android.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Ethical Hacking for Beginners",
+      "description": "Learn the basics of cybersecurity and ethical hacking tools and techniques.",
+      "price": "3499",
+      "instruction": "Rahul Verma",
+      "isfeatured": "false",
+      "image": "https://example.com/images/hacking.jpg"
+    }
+  ]
+}
