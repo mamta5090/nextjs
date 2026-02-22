@@ -94,6 +94,11 @@ const LoginPage = () => {
           onClick={() => signIn('google')}
           className='w-full flex items-center justify-center gap-3 bg-white hover:bg-gray-100 text-gray-900 font-semibold py-3 rounded-lg transition duration-200 border border-gray-300'
         >
+          {/* {async()=>{
+            await signIn('google',{
+              callbackUrl:'/'
+            })
+          }} */}
           <FcGoogle size={22} />
           <span>Sign in with Google</span>
         </button>

@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema<IUser>(
     name: { type: String, required: true },
     image: { type: String },
     email: { type: String, required: true, unique: true },
-    password: { type: String, required: true },
+    password: { type: String, required: false },
   },
   { timestamps: true }
 );

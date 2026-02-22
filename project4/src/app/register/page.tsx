@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { FcGoogle } from "react-icons/fc";
 import axios from 'axios'
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 const RegisterPage = () => {
   const [name, setName] = useState("")
@@ -11,10 +11,8 @@ const RegisterPage = () => {
   const [password, setPassword] = useState("")
   const router=useRouter()
 
-
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault(); 
-    
     try {
       const result = await axios.post('/api/auth/register', {
         name,
@@ -23,7 +21,8 @@ const RegisterPage = () => {
       })
       console.log(result)
     } catch (error) {
-      console.log(error)
+       console.log("Full error:", error);
+  console.log("Backend message:", error.response?.data);
     }
   }
 
@@ -37,8 +36,6 @@ const RegisterPage = () => {
         </div>
 
         <form className='space-y-5' onSubmit={handleRegister}>
-          
-        
           <div>
             <label className='block text-sm font-medium text-gray-300 mb-1.5'>Full Name</label>
             <input 
@@ -61,7 +58,6 @@ const RegisterPage = () => {
             />
           </div>
 
-         
           <div>
             <label className='block text-sm font-medium text-gray-300 mb-1.5'>Password</label>
             <input 
@@ -94,12 +90,12 @@ const RegisterPage = () => {
 
        <p className='text-center text-gray-400 text-sm mt-8'>
   Already have an account?{' '}
-  <Link 
-    href="/login" 
-    className='text-blue-500 hover:text-blue-400 font-medium hover:underline'
+  <span
+    onClick={() => router.push('/login')}
+    className='text-blue-500 hover:text-blue-400 font-medium hover:underline cursor-pointer'
   >
     Login
-  </Link>
+  </span>
 </p>
 
       </div>
